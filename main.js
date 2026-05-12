@@ -57,7 +57,7 @@ playButton.on("click", function () {
     timer = setInterval(() => {
       const nextFrame = (currentFrame + 1) % frames.length;
       updateFrame(nextFrame);
-    }, 2500);
+    }, 1500);
   } else {
     playButton.text("Play");
     clearInterval(timer);
