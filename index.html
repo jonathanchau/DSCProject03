@@ -100,22 +100,28 @@
 
       <h3>Motivation</h3>
       <p>
-        
+        The goal of this visualization is to explore how storms develop and intensify over time using NOAA GOES C13 cloud-top temperature data. We wanted users to observe how the storm changes across time and connect those visual changes to measurable storm-related factors, instead of only showing a single satellite image. In the satellite images, brighter regions represent colder cloud tops, which often suggest taller clouds and stronger convection. This is important because storm growth is connected to warm, moist air rising, cooling, and releasing latent heat as clouds become taller and more organized. However, cold cloud tops alone do not conclusively prove that a storm has formed, so our visualization treats them as one useful signal within a larger storm development process.
       </p>
 
       <h3>Design Rationale</h3>
       <p>
-        
+        The visualization is designed around time-based exploration because storm development is a gradual process. The play button and time slider allow users to either watch the storm evolve automatically or manually inspect individual moments. The satellite image provides the visual evidence, while the line chart summarizes the storm's intensity proxy over time. The moving marker on the chart connects the current image frame to the corresponding intensity value, making it easier to compare what is happening visually with what is happening numerically.
+      </p>
+      <p>
+        We also included three displayed factors: overall storm cooling, convective energy based on minimum cloud-top temperature, and core structure based on cold cloud fraction. These factors help explain that intensification is not just about temperature becoming colder, but the storm also needs organized structure. The phase descriptions guide viewers through different stages, such as stalled development, convective burst and vortex alignment, and rapid intensification. This makes the visualization more explanatory instead of only showing raw data.
       </p>
 
       <h3>Data Transformations</h3>
       <p>
-        
+        We transformed the NOAA GOES cloud-top temperature data into a sequence of satellite image frames and summary metrics for each time step. The images were processed so that colder cloud tops appear brighter, making it easier to identify areas where clouds become taller, colder, and more concentrated over time.
+      </p>
+      <p>
+        We also calculated an intensity proxy using minimum cloud-top temperature and cold cloud fraction. Minimum cloud-top temperature represents the strongest convective energy in a frame, while cold cloud fraction represents how much of the storm core is covered by very cold cloud tops. The proxy is not a direct measurement of storm intensity, and it does not prove storm formation by itself. Instead, it provides a simplified way to compare when the storm appears to have both strong convection and organized structure.
       </p>
 
       <h3>Development Process</h3>
       <p>
-        
+        After choosing the direction, we processed the cloud-top temperature data into usable frames and metrics, then built the interactive webpage using D3.js. The work was split across data preparation, visual design, coding the interaction, and writing the explanation. The most time-consuming parts were preparing the satellite frames, connecting the time slider to both the image and chart, and deciding how to represent storm intensification without overclaiming. Overall, the final visualization is focused on showing storm development as a process rather than as a single static image.
       </p>
     </section>
   </main>
