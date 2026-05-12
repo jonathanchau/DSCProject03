@@ -57,7 +57,7 @@ playButton.on("click", function () {
     timer = setInterval(() => {
       const nextFrame = (currentFrame + 1) % frames.length;
       updateFrame(nextFrame);
-    }, 500);
+    }, 2500);
   } else {
     playButton.text("Play");
     clearInterval(timer);
@@ -91,7 +91,9 @@ const line = d3.line()
 
 svg.append("path")
   .datum(metrics)
-  .attr("class", "intensity-line")
+  .attr("fill", "none")
+  .attr("stroke", "#007bff") 
+  .attr("stroke-width", 2)
   .attr("d", line);
 
 svg.append("g")
@@ -114,6 +116,24 @@ svg.append("text")
   .attr("text-anchor", "middle")
   .text("Intensity Proxy");
 
+  svg.append("line")
+    .attr("x1", 0)
+    .attr("x2", width)
+    .attr("y1", y(5.8)) 
+    .attr("y2", y(5.8))
+    .attr("stroke", "red")
+    .attr("stroke-dasharray", "5,5")
+    .attr("stroke-width", 2)
+    .style("opacity", 0.5);
+
+  svg.append("text")
+    .attr("x", width)
+    .attr("y", y(5.8) - 5)
+    .attr("text-anchor", "end")
+    .attr("fill", "red")
+    .style("font-size", "10px")
+    .text("Rapid Intensification Threshold");
+
 const marker = svg.append("circle")
   .attr("class", "frame-marker")
   .attr("r", 6);
@@ -122,11 +142,36 @@ function updateChartMarker(frameIndex) {
   const metric = metrics.find(d => d.frame === frameIndex);
 
   if (!metric) return;
-
   marker
     .attr("cx", x(metric.frame))
     .attr("cy", y(metric.intensity_proxy));
-}
 
+  d3.select("#val-temp").text(metric.mean_cloud_top_temp_k.toFixed(1));
+  d3.select("#val-energy").text(metric.min_cloud_top_temp_k.toFixed(1));
+  d3.select("#val-struct").text((metric.cold_cloud_fraction * 100).toFixed(1));
+
+  const phaseTitle = d3.select("#phase-title");
+  const phaseDesc = d3.select("#phase-desc");
+
+  if (metric.intensity_proxy < 5.2) {
+      phaseTitle.text("Phase 1: Fighting Wind Shear (Stalled)").style("color", "#5bc0de");
+      phaseDesc.html(`
+          <strong>Why is it stalling?</strong> Early in development, updrafts are fragile. Even over warm water, high-altitude winds (wind shear) can blow the tops off the clouds. <br><br>
+          <strong>The Physics:</strong> Because the storm is tilted, the latent heat being released by the clouds doesn't stack vertically over the surface center. Without a vertically aligned "chimney," surface pressure cannot drop, and the storm stalls.
+      `);
+  } else if (metric.intensity_proxy < 5.9) {
+      phaseTitle.text("Phase 2: Convective Burst & Vortex Alignment").style("color", "#f0ad4e");
+      phaseDesc.html(`
+          <strong>Why the sudden change?</strong> Notice the Convective Energy (Min Temp) dropping. The storm is experiencing a massive, concentrated burst of deep convection.<br><br>
+          <strong>The Physics:</strong> This localized burst releases enough latent heat to establish a dominant updraft, overcoming the wind shear. The mid-level circulation and surface circulation finally align vertically. This is the critical turning point for hurricane formation.
+      `);
+  } else {
+      phaseTitle.text("Phase 3: Rapid Intensification (RI)").style("color", "#d9534f");
+      phaseDesc.html(`
+          <strong>How is it intensifying?</strong> Look at the Core Structure (Cold Fraction) hitting its peak. The scattered clouds have merged into a Central Dense Overcast (CDO).<br><br>
+          <strong>The Physics:</strong> With a vertically aligned vortex and a massive, symmetrical shield of cold clouds, the storm operates like a perfect thermodynamic engine. It is efficiently venting exhaust out the top, causing surface pressure to plummet and wind speeds to exponentially increase.
+      `);
+  }
+}
 // Initialize
 updateFrame(0);

@@ -36,15 +36,63 @@
         <p class="caption">
           Brighter areas represent colder cloud tops, which often indicate taller and more intense storm clouds.
         </p>
+        <div id="storm-narrative" style="margin-top: 15px; margin-bottom: 15px; padding: 15px; background: #e9ecef; border-left: 5px solid #d9534f; border-radius: 4px;">
+            <strong style="font-size: 1.1em; color: #333;" id="phase-title">Phase: Early Convection</strong><br>
+            <span id="phase-desc" style="color: #555;">Warm moist air is rising, but the energy is scattered and the storm lacks structure.</span>
+        </div>
       </div>
 
       <div class="chart-card">
-        <h2>Storm Intensity Proxy Over Time</h2>
+        <h2>The 3 Factors of Storm Intensification</h2>
+        
+        <div style="display: flex; justify-content: space-between; background: #f8f9fa; padding: 15px; border-radius: 8px; margin-bottom: 15px; text-align: center; border: 1px solid #ddd;">
+          <div>
+            <span style="font-size: 0.9em; color: #555;">Overall Storm Cooling</span><br>
+            <strong style="font-size: 1.2em; color: #d9534f;"><span id="val-temp">--</span> K</strong>
+          </div>
+          <div>
+            <span style="font-size: 0.9em; color: #555;">Convective Energy (Min Temp)</span><br>
+            <strong style="font-size: 1.2em; color: #f0ad4e;"><span id="val-energy">--</span> K</strong>
+          </div>
+          <div>
+            <span style="font-size: 0.9em; color: #555;">Core Structure (Cold Fraction)</span><br>
+            <strong style="font-size: 1.2em; color: #5bc0de;"><span id="val-struct">--</span>%</strong>
+          </div>
+        </div>
+
         <div id="line-chart"></div>
         <p class="caption">
-          The intensity proxy is based on cold cloud coverage and minimum cloud-top temperature.
+          The chart tracks the combined intensity proxy. Watch how changes in energy (rapid cooling) drive the structural expansion (cloud fraction) of the storm.
         </p>
+
+        <details style="margin-top: 15px; background: #fdfdfe; padding: 12px 18px; border-radius: 8px; border: 1px solid #e2e8f0; border-left: 4px solid #3b82f6; cursor: pointer; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
+          <summary style="font-weight: 600; color: #1e293b; outline: none; font-size: 0.95em;">
+            🤔 Wait, why use an "Intensity Proxy" instead of just temperature?
+          </summary>
+          <div style="margin-top: 12px; font-size: 0.95em; color: #475569; line-height: 1.6;">
+            <p style="margin-bottom: 10px;">If you're wondering why we didn't just plot the raw temperature on the graph, here's the deal:</p>
+            
+            <p style="margin-bottom: 10px;">Think of a hurricane like a car. The <strong>Energy (Min Temp)</strong> is the raw horsepower, and the <strong>Structure (Cold Fraction)</strong> is the transmission. You can have a massive engine, but if the transmission is broken (like when wind shear blows the storm apart), the car isn't going anywhere.</p>
+            
+            <p style="margin-bottom: 15px;">We built the <strong>Intensity Proxy</strong> to act as a single "speedometer." It ensures the line on our chart only spikes when the storm has <em>both</em> the raw energy and the structural organization to actually use it.</p>
+            
+            <p style="margin-bottom: 8px; font-weight: 500; color: #1e293b;">The Math:</p>
+            <p style="margin-bottom: 10px; font-size: 0.9em;">We calculated this by setting a baseline for deep convection and rewarding the storm for being both cold and symmetrical:</p>
+            
+            <div style="background: #f1f5f9; padding: 12px; margin-bottom: 12px; text-align: center; border-radius: 6px; font-family: 'Courier New', monospace; font-size: 1.05em; color: #0f172a;">
+              I<sub>proxy</sub> = w<sub>1</sub>(210 - T<sub>min</sub>) + w<sub>2</sub>(f<sub>cold</sub> &times; 100)
+            </div>
+            
+            <ul style="margin-top: 0; padding-left: 20px; font-size: 0.9em; color: #475569;">
+              <li style="margin-bottom: 4px;"><strong>210 K</strong>: The baseline temperature where serious convection starts.</li>
+              <li style="margin-bottom: 4px;"><strong>T<sub>min</sub></strong>: The coldest cloud top we found in the frame.</li>
+              <li style="margin-bottom: 4px;"><strong>f<sub>cold</sub></strong>: How much of the storm's core is covered by those cold clouds.</li>
+              <li><strong>w<sub>1</sub>, w<sub>2</sub></strong>: Balancing weights to keep the graph readable.</li>
+            </ul>
+          </div>
+        </details>
       </div>
+
     </section>
 
     <section class="writeup">
