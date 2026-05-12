@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Storm Intensification</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script type="module" src="main.js"></script>
+</head>
+
+<body>
+  <main>
+    <section class="hero">
+      <h1>How Do Storms Develop and Intensify?</h1>
+      <p>
+        This interactive visualization uses GOES-16 satellite imagery to explore how
+        cloud-top temperature changes as Hurricane Laura developed over time.
+      </p>
+    </section>
+
+    <section class="controls">
+      <button id="play-button">Play</button>
+
+      <label>
+        Time:
+        <input id="time-slider" type="range" min="0" max="19" value="0" />
+      </label>
+
+      <span id="time-label"></span>
+    </section>
+
+    <section class="visual-layout">
+      <div class="image-card">
+        <h2>GOES C13 Cloud-Top Temperature</h2>
+        <img id="storm-frame" alt="GOES satellite frame of storm" />
+        <p class="caption">
+          Brighter areas represent colder cloud tops, which often indicate taller and more intense storm clouds.
+        </p>
+      </div>
+
+      <div class="chart-card">
+        <h2>Storm Intensity Proxy Over Time</h2>
+        <div id="line-chart"></div>
+        <p class="caption">
+          The intensity proxy is based on cold cloud coverage and minimum cloud-top temperature.
+        </p>
+      </div>
+    </section>
+
+    <section class="writeup">
+      <h2>Write-up</h2>
+
+      <h3>Motivation</h3>
+      <p>
+        
+      </p>
+
+      <h3>Design Rationale</h3>
+      <p>
+        
+      </p>
+
+      <h3>Data Transformations</h3>
+      <p>
+        
+      </p>
+
+      <h3>Development Process</h3>
+      <p>
+        
+      </p>
+    </section>
+  </main>
+</body>
+</html>

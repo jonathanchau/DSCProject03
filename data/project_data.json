@@ -1,0 +1,324 @@
+{
+  "title": "How Do Storms Develop and Intensify?",
+  "question": "How do storms develop and intensify based on underlying temperature, energy, and atmospheric structure?",
+  "storm": "Hurricane Laura",
+  "satellite": "GOES-16",
+  "product": "ABI-L2-MCMIPC",
+  "description": "This project uses GOES-16 C13 infrared imagery to explore how cloud-top temperature patterns changed as Hurricane Laura developed over time. Brighter regions in the exported frames represent colder cloud tops, which often indicate taller and stronger storm clouds.",
+  "variables": {
+    "CMI_C13": {
+      "name": "Cloud-top temperature",
+      "description": "GOES ABI Band 13 infrared brightness temperature. Colder cloud tops can indicate taller storm clouds and stronger convection.",
+      "unit": "Kelvin",
+      "visual_encoding": "Brighter pixels represent colder cloud tops."
+    }
+  },
+  "frames": [
+    {
+      "frame": 0,
+      "time": "2020-08-26T18:02:36.279200",
+      "variable": "CMI_C13",
+      "label": "Cloud-top temperature",
+      "file": "data/frames/c13_cloud_top_temp_000.png"
+    },
+    {
+      "frame": 1,
+      "time": "2020-08-26T18:32:36.550923008",
+      "variable": "CMI_C13",
+      "label": "Cloud-top temperature",
+      "file": "data/frames/c13_cloud_top_temp_001.png"
+    },
+    {
+      "frame": 2,
+      "time": "2020-08-26T19:02:35.982776960",
+      "variable": "CMI_C13",
+      "label": "Cloud-top temperature",
+      "file": "data/frames/c13_cloud_top_temp_002.png"
+    },
+    {
+      "frame": 3,
+      "time": "2020-08-26T19:32:36.550211968",
+      "variable": "CMI_C13",
+      "label": "Cloud-top temperature",
+      "file": "data/frames/c13_cloud_top_temp_003.png"
+    },
+    {
+      "frame": 4,
+      "time": "2020-08-26T20:02:36.547009024",
+      "variable": "CMI_C13",
+      "label": "Cloud-top temperature",
+      "file": "data/frames/c13_cloud_top_temp_004.png"
+    },
+    {
+      "frame": 5,
+      "time": "2020-08-26T20:32:35.971224960",
+      "variable": "CMI_C13",
+      "label": "Cloud-top temperature",
+      "file": "data/frames/c13_cloud_top_temp_005.png"
+    },
+    {
+      "frame": 6,
+      "time": "2020-08-26T21:02:35.970881024",
+      "variable": "CMI_C13",
+      "label": "Cloud-top temperature",
+      "file": "data/frames/c13_cloud_top_temp_006.png"
+    },
+    {
+      "frame": 7,
+      "time": "2020-08-26T21:32:36.548096",
+      "variable": "CMI_C13",
+      "label": "Cloud-top temperature",
+      "file": "data/frames/c13_cloud_top_temp_007.png"
+    },
+    {
+      "frame": 8,
+      "time": "2020-08-26T22:02:36.248608896",
+      "variable": "CMI_C13",
+      "label": "Cloud-top temperature",
+      "file": "data/frames/c13_cloud_top_temp_008.png"
+    },
+    {
+      "frame": 9,
+      "time": "2020-08-26T22:32:35.963544064",
+      "variable": "CMI_C13",
+      "label": "Cloud-top temperature",
+      "file": "data/frames/c13_cloud_top_temp_009.png"
+    },
+    {
+      "frame": 10,
+      "time": "2020-08-26T23:02:36.541803904",
+      "variable": "CMI_C13",
+      "label": "Cloud-top temperature",
+      "file": "data/frames/c13_cloud_top_temp_010.png"
+    },
+    {
+      "frame": 11,
+      "time": "2020-08-26T23:32:35.954419072",
+      "variable": "CMI_C13",
+      "label": "Cloud-top temperature",
+      "file": "data/frames/c13_cloud_top_temp_011.png"
+    },
+    {
+      "frame": 12,
+      "time": "2020-08-27T00:02:35.950294016",
+      "variable": "CMI_C13",
+      "label": "Cloud-top temperature",
+      "file": "data/frames/c13_cloud_top_temp_012.png"
+    },
+    {
+      "frame": 13,
+      "time": "2020-08-27T00:32:35.944237056",
+      "variable": "CMI_C13",
+      "label": "Cloud-top temperature",
+      "file": "data/frames/c13_cloud_top_temp_013.png"
+    },
+    {
+      "frame": 14,
+      "time": "2020-08-27T01:02:35.940584960",
+      "variable": "CMI_C13",
+      "label": "Cloud-top temperature",
+      "file": "data/frames/c13_cloud_top_temp_014.png"
+    },
+    {
+      "frame": 15,
+      "time": "2020-08-27T01:32:36.228546048",
+      "variable": "CMI_C13",
+      "label": "Cloud-top temperature",
+      "file": "data/frames/c13_cloud_top_temp_015.png"
+    },
+    {
+      "frame": 16,
+      "time": "2020-08-27T02:02:35.932086016",
+      "variable": "CMI_C13",
+      "label": "Cloud-top temperature",
+      "file": "data/frames/c13_cloud_top_temp_016.png"
+    },
+    {
+      "frame": 17,
+      "time": "2020-08-27T02:32:35.929744896",
+      "variable": "CMI_C13",
+      "label": "Cloud-top temperature",
+      "file": "data/frames/c13_cloud_top_temp_017.png"
+    },
+    {
+      "frame": 18,
+      "time": "2020-08-27T03:02:35.924729984",
+      "variable": "CMI_C13",
+      "label": "Cloud-top temperature",
+      "file": "data/frames/c13_cloud_top_temp_018.png"
+    },
+    {
+      "frame": 19,
+      "time": "2020-08-27T03:32:36.213591040",
+      "variable": "CMI_C13",
+      "label": "Cloud-top temperature",
+      "file": "data/frames/c13_cloud_top_temp_019.png"
+    }
+  ],
+  "metrics": [
+    {
+      "frame": 0,
+      "time": "2020-08-26T18:02:36.279200",
+      "min_cloud_top_temp_k": 196.24151611328125,
+      "mean_cloud_top_temp_k": 270.41912841796875,
+      "cold_cloud_fraction": 0.08868333333333334,
+      "intensity_proxy": 5.654314879353842
+    },
+    {
+      "frame": 1,
+      "time": "2020-08-26T18:32:36.550923008",
+      "min_cloud_top_temp_k": 198.08511352539062,
+      "mean_cloud_top_temp_k": 270.0768737792969,
+      "cold_cloud_fraction": 0.08887291666666666,
+      "intensity_proxy": 5.502556546084086
+    },
+    {
+      "frame": 2,
+      "time": "2020-08-26T19:02:35.982776960",
+      "min_cloud_top_temp_k": 197.9007568359375,
+      "mean_cloud_top_temp_k": 269.6275329589844,
+      "cold_cloud_fraction": 0.09157083333333334,
+      "intensity_proxy": 5.686479445902507
+    },
+    {
+      "frame": 3,
+      "time": "2020-08-26T19:32:36.550211968",
+      "min_cloud_top_temp_k": 192.861572265625,
+      "mean_cloud_top_temp_k": 269.17333984375,
+      "cold_cloud_fraction": 0.0916875,
+      "intensity_proxy": 6.155754592895508
+    },
+    {
+      "frame": 4,
+      "time": "2020-08-26T20:02:36.547009024",
+      "min_cloud_top_temp_k": 195.872802734375,
+      "mean_cloud_top_temp_k": 268.9107666015625,
+      "cold_cloud_fraction": 0.08499166666666666,
+      "intensity_proxy": 5.450277374267578
+    },
+    {
+      "frame": 5,
+      "time": "2020-08-26T20:32:35.971224960",
+      "min_cloud_top_temp_k": 194.09063720703125,
+      "mean_cloud_top_temp_k": 268.7018737792969,
+      "cold_cloud_fraction": 0.074675,
+      "intensity_proxy": 4.921781666564942
+    },
+    {
+      "frame": 6,
+      "time": "2020-08-26T21:02:35.970881024",
+      "min_cloud_top_temp_k": 192.5543212890625,
+      "mean_cloud_top_temp_k": 268.2839660644531,
+      "cold_cloud_fraction": 0.07200833333333333,
+      "intensity_proxy": 4.856650914510091
+    },
+    {
+      "frame": 7,
+      "time": "2020-08-26T21:32:36.548096",
+      "min_cloud_top_temp_k": 195.6884307861328,
+      "mean_cloud_top_temp_k": 267.9441833496094,
+      "cold_cloud_fraction": 0.07333125,
+      "intensity_proxy": 4.716047759914399
+    },
+    {
+      "frame": 8,
+      "time": "2020-08-26T22:02:36.248608896",
+      "min_cloud_top_temp_k": 190.8336181640625,
+      "mean_cloud_top_temp_k": 267.6559143066406,
+      "cold_cloud_fraction": 0.07830833333333333,
+      "intensity_proxy": 5.416304084269205
+    },
+    {
+      "frame": 9,
+      "time": "2020-08-26T22:32:35.963544064",
+      "min_cloud_top_temp_k": 188.8056640625,
+      "mean_cloud_top_temp_k": 267.29541015625,
+      "cold_cloud_fraction": 0.08498541666666666,
+      "intensity_proxy": 6.050480303955077
+    },
+    {
+      "frame": 10,
+      "time": "2020-08-26T23:02:36.541803904",
+      "min_cloud_top_temp_k": 191.93978881835938,
+      "mean_cloud_top_temp_k": 267.0253601074219,
+      "cold_cloud_fraction": 0.09224375,
+      "intensity_proxy": 6.278129105186462
+    },
+    {
+      "frame": 11,
+      "time": "2020-08-26T23:32:35.954419072",
+      "min_cloud_top_temp_k": 194.95098876953125,
+      "mean_cloud_top_temp_k": 266.9946594238281,
+      "cold_cloud_fraction": 0.09357916666666667,
+      "intensity_proxy": 6.087232263437907
+    },
+    {
+      "frame": 12,
+      "time": "2020-08-27T00:02:35.950294016",
+      "min_cloud_top_temp_k": 194.21356201171875,
+      "mean_cloud_top_temp_k": 267.276123046875,
+      "cold_cloud_fraction": 0.09471875,
+      "intensity_proxy": 6.231209173202515
+    },
+    {
+      "frame": 13,
+      "time": "2020-08-27T00:32:35.944237056",
+      "min_cloud_top_temp_k": 193.47610473632812,
+      "mean_cloud_top_temp_k": 267.7425537109375,
+      "cold_cloud_fraction": 0.09453333333333333,
+      "intensity_proxy": 6.288725565592448
+    },
+    {
+      "frame": 14,
+      "time": "2020-08-27T01:02:35.940584960",
+      "min_cloud_top_temp_k": 194.52081298828125,
+      "mean_cloud_top_temp_k": 268.26605224609375,
+      "cold_cloud_fraction": 0.08569375,
+      "intensity_proxy": 5.611157081985474
+    },
+    {
+      "frame": 15,
+      "time": "2020-08-27T01:32:36.228546048",
+      "min_cloud_top_temp_k": 194.82809448242188,
+      "mean_cloud_top_temp_k": 268.85736083984375,
+      "cold_cloud_fraction": 0.07785625,
+      "intensity_proxy": 5.074040168952942
+    },
+    {
+      "frame": 16,
+      "time": "2020-08-27T02:02:35.932086016",
+      "min_cloud_top_temp_k": 191.75543212890625,
+      "mean_cloud_top_temp_k": 269.6701965332031,
+      "cold_cloud_fraction": 0.0721375,
+      "intensity_proxy": 4.922992514801025
+    },
+    {
+      "frame": 17,
+      "time": "2020-08-27T02:32:35.929744896",
+      "min_cloud_top_temp_k": 195.25827026367188,
+      "mean_cloud_top_temp_k": 270.4140930175781,
+      "cold_cloud_fraction": 0.06181458333333333,
+      "intensity_proxy": 4.001983047930399
+    },
+    {
+      "frame": 18,
+      "time": "2020-08-27T03:02:35.924729984",
+      "min_cloud_top_temp_k": 194.95098876953125,
+      "mean_cloud_top_temp_k": 271.1037292480469,
+      "cold_cloud_fraction": 0.056475,
+      "intensity_proxy": 3.6736429092407223
+    },
+    {
+      "frame": 19,
+      "time": "2020-08-27T03:32:36.213591040",
+      "min_cloud_top_temp_k": 196.24151611328125,
+      "mean_cloud_top_temp_k": 272.0127868652344,
+      "cold_cloud_fraction": 0.05613958333333333,
+      "intensity_proxy": 3.579374719365438
+    }
+  ],
+  "notes": {
+    "data_transformation": "The original GOES NetCDF files were downloaded, cropped to focus on the storm region, normalized, and exported as PNG frames for use in a browser-based D3 visualization.",
+    "intensity_proxy": "The intensity proxy combines cold cloud fraction and minimum cloud-top temperature. It is not a direct measurement of hurricane intensity, but it helps summarize changes in storm structure over time."
+  }
+}
