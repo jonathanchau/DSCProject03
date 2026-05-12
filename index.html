@@ -110,6 +110,9 @@
       <p>
         We also included three displayed factors: overall storm cooling, convective energy based on minimum cloud-top temperature, and core structure based on cold cloud fraction. These factors help explain that intensification is not just about temperature becoming colder, but the storm also needs organized structure. The phase descriptions guide viewers through different stages, such as stalled development, convective burst and vortex alignment, and rapid intensification. This makes the visualization more explanatory instead of only showing raw data.
       </p>
+      <p>
+        We considered showing only raw cloud-top temperature, but that would not fully capture storm organization. Instead, we used an intensity proxy that combines cold cloud-top temperature with cold cloud fraction. We also kept the color palette simple, using grayscale satellite imagery for the cloud structure and a blue line chart with a red threshold line to highlight possible rapid intensification without distracting from the main storm pattern.
+      </p>
 
       <h3>Data Transformations</h3>
       <p>
@@ -121,7 +124,7 @@
 
       <h3>Development Process</h3>
       <p>
-        After choosing the direction, we processed the cloud-top temperature data into usable frames and metrics, then built the interactive webpage using D3.js. The work was split across data preparation, visual design, coding the interaction, and writing the explanation. The most time-consuming parts were preparing the satellite frames, connecting the time slider to both the image and chart, and deciding how to represent storm intensification without overclaiming. Overall, the final visualization is focused on showing storm development as a process rather than as a single static image.
+        After choosing the direction, we processed the cloud-top temperature data into usable frames and metrics, then built the interactive webpage using D3.js. The work was split across data preparation, visual design, coding the interaction, and writing the explanation. Each of the three members contributed around 5 hours of work, so roughly 15 hours in total. The most time-consuming parts were preparing the satellite frames, connecting the time slider to both the image and chart, and deciding how to represent storm intensification without overclaiming. Overall, the final visualization is focused on showing storm development as a process rather than as a single static image.
       </p>
     </section>
   </main>
