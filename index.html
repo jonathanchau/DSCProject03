@@ -67,28 +67,15 @@
 
         <details style="margin-top: 15px; background: #fdfdfe; padding: 12px 18px; border-radius: 8px; border: 1px solid #e2e8f0; border-left: 4px solid #3b82f6; cursor: pointer; box-shadow: 0 2px 4px rgba(0,0,0,0.02);">
           <summary style="font-weight: 600; color: #1e293b; outline: none; font-size: 0.95em;">
-            🤔 Wait, why use an "Intensity Proxy" instead of just temperature?
+            Why use an "Intensity Proxy" instead of just temperature?
           </summary>
           <div style="margin-top: 12px; font-size: 0.95em; color: #475569; line-height: 1.6;">
-            <p style="margin-bottom: 10px;">If you're wondering why we didn't just plot the raw temperature on the graph, here's the deal:</p>
+            <p style="margin-bottom: 10px;">If you're wondering why we didn't just plot the raw temperature on the graph:</p>
             
             <p style="margin-bottom: 10px;">Think of a hurricane like a car. The <strong>Energy (Min Temp)</strong> is the raw horsepower, and the <strong>Structure (Cold Fraction)</strong> is the transmission. You can have a massive engine, but if the transmission is broken (like when wind shear blows the storm apart), the car isn't going anywhere.</p>
             
             <p style="margin-bottom: 15px;">We built the <strong>Intensity Proxy</strong> to act as a single "speedometer." It ensures the line on our chart only spikes when the storm has <em>both</em> the raw energy and the structural organization to actually use it.</p>
             
-            <p style="margin-bottom: 8px; font-weight: 500; color: #1e293b;">The Math:</p>
-            <p style="margin-bottom: 10px; font-size: 0.9em;">We calculated this by setting a baseline for deep convection and rewarding the storm for being both cold and symmetrical:</p>
-            
-            <div style="background: #f1f5f9; padding: 12px; margin-bottom: 12px; text-align: center; border-radius: 6px; font-family: 'Courier New', monospace; font-size: 1.05em; color: #0f172a;">
-              I<sub>proxy</sub> = w<sub>1</sub>(210 - T<sub>min</sub>) + w<sub>2</sub>(f<sub>cold</sub> &times; 100)
-            </div>
-            
-            <ul style="margin-top: 0; padding-left: 20px; font-size: 0.9em; color: #475569;">
-              <li style="margin-bottom: 4px;"><strong>210 K</strong>: The baseline temperature where serious convection starts.</li>
-              <li style="margin-bottom: 4px;"><strong>T<sub>min</sub></strong>: The coldest cloud top we found in the frame.</li>
-              <li style="margin-bottom: 4px;"><strong>f<sub>cold</sub></strong>: How much of the storm's core is covered by those cold clouds.</li>
-              <li><strong>w<sub>1</sub>, w<sub>2</sub></strong>: Balancing weights to keep the graph readable.</li>
-            </ul>
           </div>
         </details>
       </div>
